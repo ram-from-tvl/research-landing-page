@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPIRIT: Short-Term Solar Irradiance Prediction</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2360A5FA' d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v4h4v2h-4v4h-2v-4H7v-2h4V7z'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            @apply bg-gray-950 text-gray-50;
+        }
+        .hero-gradient {
+            background-image: linear-gradient(135deg, #1A202C 0%, #2D3748 50%, #1A202C 100%);
+        }
+        .glassmorphism-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+        .text-gradient {
+            background-image: linear-gradient(to right, #6EE7B7, #3B82F6, #9333EA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased leading-relaxed">
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden hero-gradient">
+        <!-- Background elements for visual interest -->
+        <div class="absolute inset-0 z-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div class="absolute top-1/2 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+            <div class="absolute bottom-1/4 left-1/3 w-96 h-96 bg-teal-500 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-4000"></div>
+        </div>
+
+        <div class="relative z-10 text-center max-w-5xl px-6 py-12 rounded-2xl glassmorphism-card">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-gradient drop-shadow-lg">
+                SPIRIT: Short-Term Prediction of Solar IRradIance for Transfer Learning Using Foundation Models
+            </h1>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 font-light max-w-3xl mx-auto">
+                Unlocking efficient solar energy deployment with data-efficient forecasting.
+            </p>
+            <div class="text-lg text-gray-200 font-medium mb-4">
+                <p>
+                    Aditya Mishra*<sup>1</sup>, T Ravindra*<sup>1</sup>, Srinivasan Iyengar<sup>2</sup>, Shivkumar Kalyanaraman<sup>3</sup>, Ponnurangam Kumaraguru<sup>1</sup>
+                </p>
+                <p class="text-base text-gray-400 mt-2">
+                    <sup>1</sup>International Institute of Information Technology, Hyderabad<br>
+                    <sup>2</sup>Microsoft Corporation India<br>
+                    <sup>3</sup>Anusandhan National Research Foundation
+                </p>
+                <p class="text-sm text-gray-500 mt-1">
+                    *{aditya.mishra, t.ravindra}@students.iiit.ac.in, pk.guru@iiit.ac.in, sriyengar@microsoft.com, ceo@anrf.gov.in
+                </p>
+                <p class="text-sm text-gray-500 mt-2 italic">*These authors contributed equally.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About the Project Section -->
+    <section class="py-20 bg-gray-900 text-gray-100 relative overflow-hidden">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gradient">About the Project</h2>
+
+            <div class="bg-gray-800 p-8 md:p-12 rounded-xl shadow-2xl space-y-8 glassmorphism-card">
+                <p class="text-lg leading-relaxed text-gray-200">
+                    Traditional solar forecasting models demand years of site-specific historical irradiance data, a luxury often unavailable for newer photovoltaic (PV) farms. With solar energy's inherent intermittency, developing accurate and data-efficient forecasting systems is crucial for robust grid management and to accelerate the global proliferation of solar power, directly supporting the United Nations' net-zero goals.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-200">
+                    In this groundbreaking work, we introduce <strong class="font-semibold text-blue-300">SPIRIT</strong>, a novel framework that leverages state-of-the-art foundation models for solar irradiance forecasting. This innovative approach makes accurate prediction applicable even to the most recent solar installations, eliminating the reliance on extensive historical data.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-200">
+                    Our findings demonstrate that SPIRIT significantly outperforms existing state-of-the-art models in zero-shot transfer learning scenarios, achieving performance improvements of up to 70%. This enables effective forecasting at new locations without any prior site-specific data. Furthermore, performance sees additional enhancements through fine-tuning as more location-specific data becomes available over time. These results are backed by rigorous statistical significance, validating the robustness of our method.
+                </p>
+                <p class="text-lg leading-relaxed text-gray-200">
+                    By dramatically reducing the forecasting setup timeline, SPIRIT has the potential to accelerate solar farm deployment across potential global sites—many of which currently lack the necessary historical data. This innovation is a pivotal step towards democratizing access to clean energy and fostering broader participation in the renewable energy transition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crucial Links Section -->
+    <section class="py-20 bg-gray-950 text-gray-100">
+        <div class="container mx-auto px-6 max-w-3xl text-center">
+            <h2 class="text-4xl font-bold mb-12 text-gradient">Explore SPIRIT</h2>
+            <p class="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
+                Dive deeper into our research, access the codebase, and contribute to the future of solar forecasting.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-8">
+                <a href="https://github.com/surya-ravindra06/SPIRIT-Official" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center justify-center px-10 py-5 text-xl font-semibold rounded-full
+                          bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg
+                          hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 ease-in-out
+                          transform active:scale-95 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+                    <svg class="w-7 h-7 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.4.082.547-.172.547-.385 0-.192-.007-.694-.01-1.362-2.782.603-3.37-1.34-3.37-1.34-.454-1.154-1.11-1.465-1.11-1.465-.908-.619.069-.606.069-.606 1.004.07 1.532 1.03 1.532 1.03.89 1.535 2.342 1.091 2.91.833.091-.647.35-1.091.636-1.341-2.22-.253-4.555-1.116-4.555-4.949 0-1.095.39-1.99 1.029-2.694-.103-.253-.447-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.701.111 2.492.327 1.909-1.296 2.747-1.026 2.747-1.026.546 1.378.202 2.397.099 2.65.64.704 1.028 1.599 1.028 2.694 0 3.841-2.339 4.693-4.566 4.942.359.31.678.924.678 1.865 0 1.347-.012 2.41-.012 2.722 0 .214.144.469.551.383C21.137 20.188 24 16.421 24 12.017 24 6.484 19.522 2 14 2z" clip-rule="evenodd" />
+                    </svg>
+                    View Code on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Showcase Section -->
+    <section class="py-20 bg-gray-900 text-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold mb-12 text-center text-gradient">Visuals & Key Insights</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Image 1 -->
+                <div class="glassmorphism-card p-6 rounded-xl flex flex-col items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="w-full h-64 bg-gray-700 flex items-center justify-center rounded-lg overflow-hidden mb-4 border border-gray-600 shadow-xl">
+                        <img src="image_1_0.png" alt="SPIRIT Framework Diagram" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <p class="text-lg font-medium text-gray-200 text-center">SPIRIT Framework Overview</p>
+                    <p class="text-sm text-gray-400 text-center mt-2">A high-level view of our novel prediction model.</p>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="glassmorphism-card p-6 rounded-xl flex flex-col items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="w-full h-64 bg-gray-700 flex items-center justify-center rounded-lg overflow-hidden mb-4 border border-gray-600 shadow-xl">
+                        <img src="image_1_1.jpeg" alt="Prediction Performance Graph" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <p class="text-lg font-medium text-gray-200 text-center">Performance Comparison</p>
+                    <p class="text-sm text-gray-400 text-center mt-2">Zero-shot transfer learning superiority shown graphically.</p>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="glassmorphism-card p-6 rounded-xl flex flex-col items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="w-full h-64 bg-gray-700 flex items-center justify-center rounded-lg overflow-hidden mb-4 border border-gray-600 shadow-xl">
+                        <img src="image_5_0.png" alt="Model Architecture Diagram" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <p class="text-lg font-medium text-gray-200 text-center">Detailed Model Architecture</p>
+                    <p class="text-sm text-gray-400 text-center mt-2">Components of the SPIRIT foundation model.</p>
+                </div>
+
+                <!-- Image 4 -->
+                <div class="glassmorphism-card p-6 rounded-xl flex flex-col items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="w-full h-64 bg-gray-700 flex items-center justify-center rounded-lg overflow-hidden mb-4 border border-gray-600 shadow-xl">
+                        <img src="image_6_0.png" alt="Data Preprocessing Pipeline" class="max-w-full max-h=full object-contain">
+                    </div>
+                    <p class="text-lg font-medium text-gray-200 text-center">Data Preprocessing Workflow</p>
+                    <p class="text-sm text-gray-400 text-center mt-2">How raw data is transformed for optimal model input.</p>
+                </div>
+
+                <!-- Image 5 -->
+                <div class="glassmorphism-card p-6 rounded-xl flex flex-col items-center group hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="w-full h-64 bg-gray-700 flex items-center justify-center rounded-lg overflow-hidden mb-4 border border-gray-600 shadow-xl">
+                        <img src="image_11_0.png" alt="Impact on Solar Farm Deployment" class="max-w-full max-h-full object-contain">
+                    </div>
+                    <p class="text-lg font-medium text-gray-200 text-center">Global Deployment Impact</p>
+                    <p class="text-sm text-gray-400 text-center mt-2">Illustrating SPIRIT's role in accelerating solar adoption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section (Optional, but good practice for premium feel) -->
+    <footer class="py-12 bg-gray-950 text-gray-400 text-center">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 SPIRIT Project. All rights reserved. <br> Powered by innovation in AI and Renewable Energy.</p>
+            <p class="mt-4 text-sm">
+                <a href="#" class="text-gray-500 hover:text-blue-400 transition-colors duration-200">Privacy Policy</a> |
+                <a href="#" class="text-gray-500 hover:text-blue-400 transition-colors duration-200">Terms of Service</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Custom Tailwind Animations -->
+    <style>
+        @keyframes blob {
+            0% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+                transform: translate(-20px, 20px) scale(0.9);
+            }
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+        }
+        .animate-blob {
+            animation: blob 7s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        .animation-delay-4000 {
+            animation-delay: 4s;
+        }
+    </style>
+</body>
+</html>
